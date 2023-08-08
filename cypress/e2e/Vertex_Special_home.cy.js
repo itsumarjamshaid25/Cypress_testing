@@ -12,8 +12,21 @@ describe('Home page', ()=>{
         cy.visit("https://vertexspecial.com/")
        
         //cy.title().should('eq','Vertex Special Technologies') //here thi is used for assertion 
-        cy.get(".bar-line").click()
-        cy.get(".flaticon-facebook").click()
+       
+         
     })
+    it('check  side bar ', ()=>{
+        cy.visit("https://vertexspecial.com/")
+       
+
+        cy.get(".bar-line").click()
+    })
+    it('check fb link ', ()=>{
+        cy.visit("https://vertexspecial.com/")
+        cy.get(".bar-line").click()
+
+        cy.get("div[class='sidebars-wrappers home-21 active'] li:nth-child(1) a:nth-child(1)").click()
+    })
+
 
 })
